@@ -1,22 +1,22 @@
 # --- FUNÇÕES ---
 
 def classificar_aluno(nota):
-    """Classifica a situação do aluno com base na nota."""
+    """Classifica a situação do aluno com a nota."""
     if nota >= 7:
-        return "Aprovado"
+        return "Aluno Aprovado"
     elif nota >= 5:
         return "Recuperação"
     else:
-        return "Reprovado"
+        return "Infelizmente está reprovado"
 
 
 def calcular_media(lista_alunos):
-    """Calcula a média aritmética das notas de todos os alunos."""
+    """Calcula a média aritmética notas de todos os alunos."""
     if not lista_alunos:
         return 0
     soma_notas = 0
     for aluno in lista_alunos:
-        soma_notas += aluno['nota']
+        soma_notas += aluno['nota aluno']
     return soma_notas / len(lista_alunos)
 
 
@@ -51,7 +51,7 @@ while True:
         except ValueError:
             print("Erro: Valor não numérico. Por favor, digite um número para a nota.")
 
-    # 3. Salvar em Dicionário e adicionar à Lista
+    # 3. Salvar Dicionário e adicionar à Lista
     aluno_data = {
         "nome": nome,
         "idade": idade,
@@ -105,6 +105,10 @@ if alunos:
     print(f"Quantidade em Recuperação: {recuperacao}")
     print(f"Quantidade de Reprovados: {reprovados}")
     print(f"Maior nota: {maior_aluno['nota']} ({maior_aluno['nome']})")
+    print(f"Menor nota: {menor_aluno['nota']} ({menor_aluno['nome']})")
+    print("=" * 30)
+else:
+    print("Nenhum aluno cadastrado.")
     print(f"Menor nota: {menor_aluno['nota']} ({menor_aluno['nome']})")
     print("=" * 30)
 else:
